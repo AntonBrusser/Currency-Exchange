@@ -1,0 +1,77 @@
+<div *ngIf = "page1" class="mainDiv">
+  <h1 class="head">Exchange</h1>
+
+  <label class="secindary">From:</label>
+      <select id="select1" [(ngModel)] = "exchangeFromNameInput" (change)="enableStart2()">
+        
+        <option  *ngFor = "let j of arrOfAllCoins" [value] = "j.getCoinName()">{{j.getCoinName()}}</option>
+      </select> 
+      <input class="input1" type="number" [(ngModel)]="exchangeNumber" (keyup)="enableStart()" name="value">  <br> <br>
+
+  <label class="secindary">To:</label>
+      <select id="select2" [(ngModel)] = "exchangeToNameInput" (change)="enableStart3()">
+  
+          <option *ngFor = "let j of arrOfAllCoins" [value] = "j.getCoinName()">{{j.getCoinName()}}</option>
+      </select>  <br><br>
+
+  <button class="bigB" [disabled]="startB" (click) = "convert()">start</button> <br><br>
+
+  <button  id="bOne" (click) = "turnToPage2()">Update</button>
+  <button  id="bTwo" (click) = "goToFacebook()">Share on FACEBOOK</button>
+  <button  id="bThree" (click) = "showLogDiv()">View your exchange list</button>
+
+  <br> <br>
+
+
+<div *ngIf = "logDiv" >
+  
+<div class="smallDiv" *ngFor = "let j of arrOfAllMyActions">
+
+    <p> # {{j.numberOfDeal}}</p>
+    <p> From {{j.fromCoinName}}   To {{j.toCoinName}}  </p>
+    <p> {{j.exchangeVar}}  = {{j.result}}  </p>
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="mainDiv"  *ngIf = "page2">
+<h1 class="head">Update</h1>
+
+<table >
+  <th>
+    TYPE
+  </th>
+  <th>
+    VALUE
+  </th>
+  
+   <tr *ngFor = "let i of arrOfAllCoins">
+      <td>
+        {{i.coinName}}
+      </td>
+      <td>
+        {{i.coinValue}}
+      </td>
+  </tr>
+</table>
+
+<br><br>
+
+<h3>  <span>Type</span> <input class="input1" id="inputType" type="text" [(ngModel)]="coinNameInput" (keyup)="enableUpdate1()"> </h3>  <br> <br>
+<h3> <span>New Value</span> <input class="input1" type="number" [(ngModel)]="coinVlueInput" (keyup)="enableUpdate2()">  </h3>  <br> <br>
+
+<button class="buton2" (click) = "turnToPage1()" >BACK</button>
+<button class="buton2" id="updateB" [disabled] = "UpdateB" (click) = "updateLogOfCoins()">UPDATE</button>
+
+</div>

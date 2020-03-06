@@ -1,0 +1,111 @@
+.mainDiv{
+    background-color: rgb(173, 173, 173);
+    width: 600px;
+    height: 100%;
+    padding: 20px;
+    clear: both;
+}
+
+.smallDiv{
+    background-color: rgb(218, 216, 216);
+    padding: 5px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.head{
+    text-align: center;
+}
+
+.secindary{
+    font-size: 32px;
+}
+
+.bigB{
+    border-radius: 10px;
+    margin-left: 70%;
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.buton1{
+    background-color: blue;
+    border-radius: 10px;
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+    
+}
+.buton2{
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    width: 170px;
+    height: 60px;
+    font-size: 20px;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    text-align: center;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+.big{
+    text-align: center;
+    font-weight: bold;
+}
+
+.input1{
+    width: 400px;
+    margin-left: 10px;
+
+    
+}
+
+#select1{
+    margin-left: 5%;
+}
+#select2{
+    margin-left: 11%;
+}
+#bOne{
+    background-color: blue;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 4%;
+    height: 60px;
+    width: 100px;
+    
+}
+#bTwo{
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    margin-left: 4%;
+    height: 60px;
+    width: 200px;
+}
+#bThree{
+    background-color: blue;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 4%;
+    height: 60px;
+    width: 200px;
+}
+
+
+
+#updateB{
+    margin-left: 40%;
+}
+#inputType{
+    margin-left: 9.5%;
+}
